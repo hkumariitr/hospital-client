@@ -20,7 +20,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/register', {
+      const response = await axios.post('https://hospital-server-j4cu.onrender.com/api/register', {
         user: { email, password, password_confirmation: passwordConfirmation, role }
       });
 

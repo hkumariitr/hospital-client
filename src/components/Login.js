@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/login', { email, password });
+      const response = await axios.post('https://hospital-server-j4cu.onrender.com/api/login', { email, password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('role', response.data.role);
       Navigate(response.data.role === 'receptionist' ? '/receptionist' : '/doctor');

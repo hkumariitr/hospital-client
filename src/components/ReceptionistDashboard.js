@@ -34,7 +34,7 @@ function ReceptionistDashboard() {
   }, []);
 
   const fetchPatients = async () => {
-    const response = await axios.get('http://localhost:3000/api/patients', {
+    const response = await axios.get('https://hospital-server-j4cu.onrender.com/api/patients', {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     });
     setPatients(response.data);
@@ -46,7 +46,7 @@ function ReceptionistDashboard() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:3000/api/patients', newPatient, {
+    await axios.post('https://hospital-server-j4cu.onrender.com/api/patients', newPatient, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     });
     setNewPatient({ name: '', email: '', phone: '', address: '' });

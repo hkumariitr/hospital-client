@@ -39,7 +39,7 @@ function DoctorDashboard() {
   const fetchPatients = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get('http://localhost:3000/api/patients', {
+      const response = await axios.get('https://hospital-server-j4cu.onrender.com/api/patients', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setPatients(response.data);
@@ -52,7 +52,7 @@ function DoctorDashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/patient_stats', {
+      const response = await axios.get('https://hospital-server-j4cu.onrender.com/api/patient_stats', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
 
