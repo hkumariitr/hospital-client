@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Hospital Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Live Demo](#live-demo)
+4. [Technology Stack](#technology-stack)
+5. [Installation](#installation)
+6. [API Documentation](#api-documentation)
+7. [Contributing](#contributing)
+8. [License](#license)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+The Hospital Management System is a web-based application designed to streamline the operations of a hospital. It provides separate portals for receptionists and doctors, allowing efficient patient management and data visualization.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Single login page for both receptionist and doctor portals
+- Receptionist Portal:
+  - Register new patients
+  - Perform CRUD operations on patient records
+- Doctor Portal:
+  - View registered patients
+  - Visualize patient registration statistics with graphs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo
 
-### `npm test`
+- Frontend: [https://hospital-client.onrender.com](https://hospital-client.onrender.com)
+- Backend: [https://hospital-server-j4cu.onrender.com](https://hospital-server-j4cu.onrender.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack
 
-### `npm run build`
+### Frontend
+- React.js
+- React Router for navigation
+- Axios for API requests
+- Recharts for data visualization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- Ruby on Rails
+- PostgreSQL database
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js and npm
+- Ruby 2.7.0 or higher
+- Rails 6.1.0 or higher
+- PostgreSQL
 
-### `npm run eject`
+### Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```
+   git clone https://github.com/hkumariitr/hospital-client.git
+   cd hospital-client
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application will be available at `http://localhost:3000`.
 
-## Learn More
+### Backend Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
+   ```
+   git clone https://github.com/hkumariitr/hospital-server.git
+   cd hospital-server
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies:
+   ```
+   bundle install
+   ```
 
-### Code Splitting
+3. Set up the database:
+   ```
+   rails db:create db:migrate db:seed
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Start the Rails server:
+   ```
+   rails server
+   ```
 
-### Analyzing the Bundle Size
+The API will be available at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Documentation
 
-### Making a Progressive Web App
+For detailed API documentation, please refer to our [Postman API Documentation](https://documenter.getpostman.com/view/22545563/2sAXqzWdJw).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+We welcome contributions to the Hospital Management System! Please follow these steps to contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository
+2. Create a new branch for your feature
+3. Commit your changes
+4. Push to your branch
+5. Create a new Pull Request
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
